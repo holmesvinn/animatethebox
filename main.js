@@ -1,8 +1,8 @@
 let editor;
 let styleSheet;
-
+let lastApplied;
 //method to apply the animation to the bot element
-const applyAnimation = () => {
+const applyAnimation = (direct = false) => {
   const bot = getElementAndValue("bot", true);
   bot.style.animation = "none";
   const keyframes = editor.getValue();
@@ -36,9 +36,46 @@ const initialiseApp = () => {
   getElementAndValue("animationtype", true).value = getDefaultValue("bezier");
 };
 
+//method to reset the all the applied styles when the box is tried to animate
+const resetStyles = () => {
+  const box = document.getElementById("bot");
+  lastApplied?.apply?.forEach((style) => {
+    box.style[Object.keys(style)[0]] = "";
+  });
+};
+//method to initialise Animatables
+const initialiseAnimatables = () => {
+  const animatableButtonsParent = document.getElementsByClassName(
+    "animatable-butons-wrapper"
+  )[0];
+
+  const animateProperties = JSON.parse(JSON.stringify(animatableList));
+  Object.keys(animateProperties).forEach((cssProperty) => {
+    const button = document.createElement("button");
+    animatableButtonsParent.appendChild(button);
+    button.innerHTML = cssProperty;
+    button.classList.add("executebtn");
+
+    button.onclick = () => {
+      resetStyles();
+      lastApplied = animateProperties[cssProperty];
+      editor.setValue(animatableList[cssProperty].keyframe);
+      animateProperties[cssProperty].apply.forEach((style) => {
+        const styleKey = Object.keys(style)[0];
+        const styleValue = style[styleKey];
+        document.getElementById("bot").style[styleKey] = styleValue;
+      });
+      setTimeout(() => {
+        applyAnimation();
+      }, 500);
+    };
+  });
+};
+
 //to detect the readiness state change
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initialiseApp();
+    initialiseAnimatables();
   }
 };
