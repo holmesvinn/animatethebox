@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+}
+div.bot-palette {
+  margin: 20px;
+}
+div.css-textbox {
+  margin: 20px;
+}
+div.bot {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: cadetblue;
+}
+div.css-textbox {
+  width: 50vh;
+  height: 400px;
+}
+
+.execute {
+  height: 39px;
+  margin-top: -86px;
+}
+
+.animation {
+  animation-name: vikky;
+  animation-duration: 4s;
+}
+
+@keyframes vikky {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: orange;
+  }
+}
+
+/** rectified css **/
+
+body {
+  min-height: 440px;
+  min-width: 660px;
+  /* overflow: hidden; */
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 50% auto;
+  grid-template-rows: 50vh auto;
+  background: #303131;
+}
+
+.grid-item {
+  background: #42403e;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 1.5rem;
+}
+
+.right-grid {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+
+.trapeziod {
+  height: 0px;
+  width: 50px;
+  border-bottom: 50px solid;
+  border-radius: 25px solid;
+  border-left: 25px solid;
+}
+
+.hz-align {
+  margin-left: calc(100% - 330px);
+}
+
+.left {
+  margin: 10px 10px 10px calc(100% - 396px);
+  padding-right: 20px !important;
+}
+.right {
+  margin: 10px 10px 10px calc(100% - 525px);
+}
+
+.keyboard-movement-text {
+  margin: 0px;
+  transform: rotate(-41deg);
+  position: relative;
+  left: -61px;
+  top: -155px;
+  font-size: 26px;
+  background: antiquewhite;
+  width: 279px;
+  font-family: system-ui;
+  padding: 7px;
+  box-shadow: 10px 10px darkcyan;
+}
+
+.css-animation-input {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.CodeMirror {
+  width: 370px;
+  height: 160px;
+  margin-left: 195px;
+}
+.custom-animation {
+  width: 250px;
+  top: -210px;
+}
+.animation-input-widgets {
+  margin-left: 200px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.time-seconds {
+  display: inline;
+  color: bisque;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.time-secods-input-number {
+  border-radius: 14px;
+  border: 0px;
+  padding-left: 23px;
+  background: bisque;
+  width: 58px;
+  margin-left: 10px;
+  height: 26px;
+}
+
+.timing-function {
+  margin-left: 12px;
+}
+.timing-function a {
+  color: #ba87b1;
+  text-decoration: underline;
+}
+
+.timing-function-select {
+  border-radius: 50px;
+  height: 26px;
+  padding-left: 13px;
+  width: 120px;
+  background: bisque;
+  font-size: 17px;
+  margin-left: 5px;
+}
+.executebtn {
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 8px;
+  border: 2px solid #282a36;
+  background: #da9d56;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#bot {
+  width: 70px;
+  height: 70px;
+  background: cadetblue;
+  position: relative;
+}
+
+.animatable-butons-wrapper {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.animatable-butons-wrapper > button {
+  margin: 8px;
+}
+
+.animatable-butons-wrapper > button::after {
+  content: "test";
+}
+
+@media screen and (max-width: 768px) {
+  .CodeMirror {
+    width: 223px;
+    height: 160px;
+    margin-left: 0px;
+  }
+  .keyboard-movement-text {
+    display: none;
+  }
+  .animation-input-widgets {
+    margin-left: 0px;
+  }
+}

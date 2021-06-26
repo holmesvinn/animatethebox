@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Noto Sans', sans-serif">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nanoblue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--codemirror-->
+    <script src="./codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./codemirror/lib/codemirror.css" />
+    <script src="./codemirror/mode/xml/xml.js"></script>
+    <script src="./codemirror/mode/css/css.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./codemirror/theme/dracula.css"
+    />
+
+    <!-- font noto sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--css and js-->
+    <script type="text/javascript" src="./main.js"></script>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+
+    <!--rxjs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.2/rxjs.umd.js"></script>
+
+    <!--utils-->
+    <script type="text/javascript" src="./utils/element_trackers.js"></script>
+    <script type="text/javascript" src="./utils/output_filters.js"></script>
+    <script type="text/javascript" src="./utils/slope_extract.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!--movements control-->
+      <div class="movements grid-item">
+        <div class="animatable-butons-wrapper">
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+
+          <button></button>
+        </div>
+      </div>
+
+      <!--input for animation keyframe implmented with code mirror-->
+      <div class="css-animation-input grid-item">
+        <textarea id="textarea"></textarea>
+        <div class="animation-input-widgets">
+          <label class="time-seconds"
+            >Time(s):
+            <input
+              required
+              class="time-secods-input-number"
+              type="number"
+              value="5"
+              min="1"
+              max="10"
+              id="timeinseconds"
+            />
+          </label>
+          <label class="timing-function time-seconds"
+            ><a href="https://cubic-bezier.com/" target="_blank">Bezier</a>:
+            <input
+              class="timing-function-select"
+              value="1,1,0.5,0.5"
+              id="animationtype"
+          /></label>
+          <button class="btn btn-primary executebtn" onclick="applyAnimation()">
+            execute
+          </button>
+        </div>
+
+        <h2 class="keyboard-movement-text custom-animation">
+          Custom Animation
+        </h2>
+      </div>
+
+      <!--animated box that to which the animation is applied-->
+      <div class="animation-box grid-item right-grid">
+        <div id="bot"></div>
+      </div>
+    </div>
+  </body>
+</html>
