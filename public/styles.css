@@ -54,8 +54,8 @@ div.css-textbox {
   padding: 1.5rem;
   border-radius: 1rem;
   margin: 1.5rem;
-  min-width: 275px;
-  max-height: 230px;
+  /* min-width: 275px;
+  max-height: 230px; */
 }
 
 .flex-items-wrapper {
@@ -97,8 +97,8 @@ div.css-textbox {
 }
 
 .css-animation-input {
-  margin-top: 0rem;
-  margin-bottom: 0.5rem;
+  /* margin-top: 0rem;
+  margin-bottom: 0.5rem; */
 }
 
 .CodeMirror {
@@ -108,7 +108,7 @@ div.css-textbox {
 }
 .custom-animation {
   width: 139px;
-  top: -240px;
+  top: -200px;
   position: relative;
 }
 .animation-input-widgets {
@@ -200,8 +200,7 @@ div.css-textbox {
   }
 
   .grid-item {
-    min-width: 76vw;
-    max-height: 265px;
+    width: 75vw;
   }
 }
 

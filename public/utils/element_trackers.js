@@ -73,9 +73,9 @@ const getDefaultValue = (state) => {
         ? defaultState?.keyframes
         : defaultAnimation;
     case "timeinseconds":
-      return defaultState?.duration ? defaultState.duration : "1";
+      return defaultState?.duration ? defaultState.duration : "2";
     case "bezier":
-      return defaultState?.bezier ? defaultState.bezier : "1,1,0.5,0.5";
+      return defaultState?.bezier ? defaultState.bezier : ".42,0,.58,1";
   }
 };
 

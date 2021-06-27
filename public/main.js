@@ -52,7 +52,7 @@ const initialiseAnimatables = () => {
   )[0];
 
   const animateProperties = JSON.parse(JSON.stringify(animatableList));
-  Object.keys(animateProperties).forEach((cssProperty) => {
+  Object.keys(animateProperties)?.forEach((cssProperty) => {
     const button = document.createElement("button");
     animatableButtonsParent.appendChild(button);
     button.innerHTML = cssProperty;
@@ -62,9 +62,9 @@ const initialiseAnimatables = () => {
       resetStyles();
       lastApplied = animateProperties[cssProperty];
       lastClicked = button;
-      button.style["box-shadow"] = "#282a36 2px 2px 2px 2px";
+      button.style["box-shadow"] = "rgb(40 42 54) 4px 4px 0px 2px";
       editor.setValue(animatableList[cssProperty].keyframe);
-      animateProperties[cssProperty].apply.forEach((style) => {
+      animateProperties[cssProperty]?.apply?.forEach((style) => {
         const styleKey = Object.keys(style)[0];
         const styleValue = style[styleKey];
         document.getElementById("bot").style[styleKey] = styleValue;
