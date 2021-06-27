@@ -1,6 +1,7 @@
 let editor;
 let styleSheet;
 let lastApplied;
+let lastClicked;
 //method to apply the animation to the bot element
 const applyAnimation = (direct = false) => {
   const bot = getElementAndValue("bot", true);
@@ -38,6 +39,7 @@ const initialiseApp = () => {
 
 //method to reset the all the applied styles when the box is tried to animate
 const resetStyles = () => {
+  if (lastClicked) lastClicked.style["box-shadow"] = "";
   const box = document.getElementById("bot");
   lastApplied?.apply?.forEach((style) => {
     box.style[Object.keys(style)[0]] = "";
@@ -59,6 +61,8 @@ const initialiseAnimatables = () => {
     button.onclick = () => {
       resetStyles();
       lastApplied = animateProperties[cssProperty];
+      lastClicked = button;
+      button.style["box-shadow"] = "#282a36 2px 2px 2px 2px";
       editor.setValue(animatableList[cssProperty].keyframe);
       animateProperties[cssProperty].apply.forEach((style) => {
         const styleKey = Object.keys(style)[0];
