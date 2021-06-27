@@ -101,6 +101,10 @@ div.css-textbox {
   margin-bottom: 0.5rem; */
 }
 
+.animation-box {
+  height: 60%;
+}
+
 .CodeMirror {
   width: 370px;
   height: 160px;
