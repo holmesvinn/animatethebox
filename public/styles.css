@@ -190,7 +190,22 @@ div.css-textbox {
   height: fit-content;
 }
 
+.theme-toggler {
+  width: 131px;
+  height: 72px;
+  position: absolute;
+  background: beige;
+  right: 0;
+  top: 0;
+  border-radius: 25px;
+  z-index: 11;
+}
+
 @media screen and (max-width: 768px) {
+  .theme-toggler {
+    bottom: 0;
+    top: auto;
+  }
   .CodeMirror {
     width: 223px;
     height: 160px;
