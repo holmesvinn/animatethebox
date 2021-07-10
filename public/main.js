@@ -62,7 +62,7 @@ const initialiseAnimatables = () => {
       resetStyles();
       lastApplied = animateProperties[cssProperty];
       lastClicked = button;
-      button.style["box-shadow"] = "rgb(40 42 54) 4px 4px 0px 2px";
+      button.style["box-shadow"] = "rgb(176 137 231 / 58%) 2px 3px 0px 2px";
       editor.setValue(animatableList[cssProperty].keyframe);
       animateProperties[cssProperty]?.apply?.forEach((style) => {
         const styleKey = Object.keys(style)[0];

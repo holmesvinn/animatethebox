@@ -90,7 +90,7 @@ div.css-textbox {
   position: relative;
   left: -61px;
   font-size: 13px;
-  background: antiquewhite;
+  background: #ffe4c4;
   font-family: system-ui;
   padding: 7px;
   box-shadow: 10px 10px darkcyan;
@@ -106,9 +106,10 @@ div.css-textbox {
 }
 
 .CodeMirror {
-  width: 370px;
+  width: auto;
   height: 160px;
   margin-left: 100px;
+  max-width: 600px;
 }
 .custom-animation {
   width: 139px;
@@ -130,64 +131,73 @@ div.css-textbox {
 }
 
 .time-secods-input-number {
-  border-radius: 14px;
+  border-radius: 0;
   border: 0px;
   padding-left: 23px;
-  background: bisque;
+  background: #295a47a6;
   width: 58px;
   margin-left: 10px;
   height: 26px;
+  color: antiquewhite;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .timing-function {
   margin-left: 12px;
 }
 .timing-function a {
-  color: #ba87b1;
+  color: #ea5e66;
   text-decoration: underline;
 }
 
 .timing-function-select {
-  border-radius: 50px;
   height: 26px;
   padding-left: 13px;
   width: 120px;
-  background: bisque;
+  background: #315044;
   font-size: 17px;
   margin-left: 5px;
+  border: 0;
+  color: aliceblue;
 }
 .executebtn {
   height: 30px;
   padding: 2px 10px 5px 10px;
   font-family: "Noto Sans", sans-serif;
-  border: 2px solid #282a36;
-  background: #da9d56;
-  border-radius: 10px;
+  border: 0;
+  background: #eaf1f2;
+  border-radius: 0;
   cursor: pointer;
   margin-left: 15px;
   margin-top: 4px;
   font-weight: bold;
+  color: #282a36;
 }
 
 #bot {
   width: 200px;
   height: 200px;
-  background: cadetblue;
+  background: #282a36;
   position: relative;
 }
 
 .animatable-butons-wrapper {
   display: flex;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow: auto;
+  gap: 5px;
   height: -webkit-fill-available;
 }
 
 .animatable-butons-wrapper > button {
   margin: 5px;
   height: fit-content;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #2b2c2c, #333434);
+  color: aliceblue;
+  font-weight: 200;
 }
 
 .theme-toggler {
@@ -207,9 +217,10 @@ div.css-textbox {
     top: auto;
   }
   .CodeMirror {
-    width: 223px;
+    width: auto;
     height: 160px;
     margin-left: 0px;
+    min-width: 100%;
   }
   .keyboard-movement-text {
     display: none;
